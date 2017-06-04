@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.labelYear = new System.Windows.Forms.Label();
 			this.textBoxYear = new System.Windows.Forms.TextBox();
 			this.textBoxMonth = new System.Windows.Forms.TextBox();
@@ -36,6 +37,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.labelResult = new System.Windows.Forms.Label();
 			this.buttonCheckDate = new System.Windows.Forms.Button();
+			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.SuspendLayout();
 			// 
 			// labelYear
@@ -89,9 +91,10 @@
 			// labelResult
 			// 
 			this.labelResult.AutoSize = true;
+			this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelResult.Location = new System.Drawing.Point(13, 100);
 			this.labelResult.Name = "labelResult";
-			this.labelResult.Size = new System.Drawing.Size(63, 17);
+			this.labelResult.Size = new System.Drawing.Size(116, 29);
 			this.labelResult.TabIndex = 6;
 			this.labelResult.Text = "[Results]";
 			// 
@@ -103,6 +106,7 @@
 			this.buttonCheckDate.TabIndex = 7;
 			this.buttonCheckDate.Text = "Check Date";
 			this.buttonCheckDate.UseVisualStyleBackColor = true;
+			this.buttonCheckDate.Click += new System.EventHandler(this.buttonCheckDate_Click);
 			// 
 			// MainForm
 			// 
@@ -122,6 +126,7 @@
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			this.Text = "Date Validator";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -137,6 +142,7 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label labelResult;
 		private System.Windows.Forms.Button buttonCheckDate;
+		private System.Windows.Forms.ToolTip toolTip;
 	}
 }
 
