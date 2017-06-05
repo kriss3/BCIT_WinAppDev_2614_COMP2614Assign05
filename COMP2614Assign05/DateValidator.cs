@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace COMP2614Assign05
 {
@@ -11,7 +7,7 @@ namespace COMP2614Assign05
 		public static Boolean Validate(string year, string month, string day)
 		{
 			var result = false;
-			if (String.IsNullOrEmpty(year) || String.IsNullOrEmpty(month) || String.IsNullOrEmpty(day))
+			if (string.IsNullOrEmpty(year) || String.IsNullOrEmpty(month) || String.IsNullOrEmpty(day))
 			{
 				return result;
 			}
@@ -26,8 +22,26 @@ namespace COMP2614Assign05
 			var isValidDay = int.TryParse(day, out d);
 
 			if (isValidYear && isValidMonth && isValidDay)
-				result = true;
+			{
+				if (IsValidDate(y, m, d))
+					result = true;
+			}
 
+			return result;
+		}
+
+		private static bool IsValidDate(int y, int m, int d)
+		{
+			bool result;
+			try
+			{
+				var constructDate = new DateTime(y,m,d);
+				result = true;
+			}
+			catch
+			{
+				result = false;
+			}
 			return result;
 		}
 	}

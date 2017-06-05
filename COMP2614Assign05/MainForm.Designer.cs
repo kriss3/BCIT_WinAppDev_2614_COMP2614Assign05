@@ -125,6 +125,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Date Validator";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
