@@ -7,10 +7,6 @@ namespace COMP2614Assign05
 		public static Boolean Validate(string year, string month, string day)
 		{
 			var result = false;
-			if (string.IsNullOrEmpty(year) || String.IsNullOrEmpty(month) || String.IsNullOrEmpty(day))
-			{
-				return result;
-			}
 
 			int y;
 			var isValidYear = int.TryParse(year, out y);
@@ -23,14 +19,14 @@ namespace COMP2614Assign05
 
 			if (isValidYear && isValidMonth && isValidDay)
 			{
-				if (IsValidDate(y, m, d))
+				if (isValidDate(y, m, d))
 					result = true;
 			}
 
 			return result;
 		}
 
-		private static bool IsValidDate(int y, int m, int d)
+		private static bool isValidDate(int y, int m, int d)
 		{
 			bool result;
 			try
