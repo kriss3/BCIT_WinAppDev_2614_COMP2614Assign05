@@ -2,8 +2,19 @@
 
 namespace COMP2614Assign05
 {
+	/// <summary>
+	/// Helper class for Date validation;
+	/// Repo location: https://github.com/kriss3/BCIT_WinAppDev_2614_COMP2614Assign05.git
+	/// </summary>
 	class DateValidator
 	{
+		/// <summary>
+		/// Static method to validate input and call interal method contructing proper date;
+		/// </summary>
+		/// <param name="year">input year</param>
+		/// <param name="month">input month</param>
+		/// <param name="day">intput day</param>
+		/// <returns></returns>
 		public static Boolean Validate(string year, string month, string day)
 		{
 			var result = false;

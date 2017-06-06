@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace COMP2614Assign05
 {
+	/// <summary>
+	/// Main driver class for main components initialization;
+	/// Repo location: https://github.com/kriss3/BCIT_WinAppDev_2614_COMP2614Assign05.git
+	/// </summary>
 	public partial class MainForm : Form
 	{
 		public MainForm()
@@ -30,7 +34,7 @@ namespace COMP2614Assign05
 			{
 				labelResult.ForeColor = Color.Red;
 				labelResult.Text = "Invalid";
-				toolTip.SetToolTip(labelResult, "Entered Date is Invalid");
+				toolTip.SetToolTip(labelResult, "Entered Date is NOT Valid");
 			}
 		}
 
