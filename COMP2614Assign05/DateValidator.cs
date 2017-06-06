@@ -30,8 +30,7 @@ namespace COMP2614Assign05
 
 			if (isValidYear && isValidMonth && isValidDay)
 			{
-				if (isValidDate(y, m, d))
-					result = true;
+				result = isValidDate(y,m,d);
 			}
 
 			return result;
